@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>e_commerce</display-name>
+  
+  <!-- Servlet for administration -->
+  <servlet>
+    <servlet-name>index</servlet-name>
+    <servlet-class>com.bankok.servlet.IndexServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>view_transaction</servlet-name>
+    <servlet-class>com.bankok.servlet.ViewTransactionServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>view_client</servlet-name>
+    <servlet-class>com.bankok.servlet.ViewClientServlet</servlet-class>
+  </servlet>
+ 
+
+   <servlet-mapping>
+   <!-- product routes -->
+    <servlet-name>index</servlet-name>
+    <url-pattern>/index.php</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>view_transaction</servlet-name>
+    <url-pattern>/transaction.php</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>view_client</servlet-name>
+    <url-pattern>/view_client.php</url-pattern>
+  </servlet-mapping>
+
+  
+  <!-- static files (CSS, js, ...) -->
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>/res/*</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+	 
+</web-app>
